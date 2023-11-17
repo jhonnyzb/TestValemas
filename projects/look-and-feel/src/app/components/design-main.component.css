@@ -1,0 +1,69 @@
+
+@media screen and (max-width: 767px) {
+    .mobile-content {
+        display: block;
+    }
+
+    .desktop-content {
+        display: none;
+    }
+
+    .padding-main{
+        padding: 10px;
+    }
+}
+
+.padding-main{
+    padding: 40px;
+}
+
+.background-main{
+    background-color: var(--ngx-color-primary);
+}
+
+.wrapper-input-color{
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #E7E7E7;
+    background-color: #f4f4f4;
+}
+
+.input-color{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-size-title {
+    font-size: 16px;
+}
+
+.text-size-subtitle {
+    font-size: 14px;
+}
+
+.text-color{
+    color: var(--ngx-color-secondary);
+}
+
+.button-design{
+    text-decoration: none;
+    height: 40px;
+    max-width: 100%;
+    border-radius: 30px;
+    line-height: 15px;
+    border-width: 3px;
+}
+
+.button-design--save{
+    background-color: var(--ngx-color-tertiary);
+    border-color: var(--ngx-color-tertiary);
+}
+
+.button-design--ruleout{
+    border-color: var(--ngx-color-tertiary);
+}

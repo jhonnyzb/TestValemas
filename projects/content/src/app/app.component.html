@@ -1,0 +1,118 @@
+<div>
+  <div class="mobile-content background-main">
+    <div>
+      <div class="header-mobile">
+        <i  class="fa fa-2x icon-color" [ngClass]="{'fa-bars': !isShowMenuMobile, 'fa-times': isShowMenuMobile}" (click)="setIsShow()"></i>
+      </div>
+      <div class="menu-mobile" *ngIf="isShowMenuMobile">
+        <div class="d-flex  align-items-center item-menu-user item-menu-user--border">
+          <i  class="fa fa-user fa-2x me-4 icon-color"></i>
+          <span class="text-menu text-color text-size-user">Nombre apellido</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center item-menu-user" (click)="navigateTo('/')">
+          <span class="text-menu text-color text-size-items">Gestión del sistema</span>
+          <i class="fa fa-chevron-down me-4"></i>
+        </div>
+        <div class="d-flex justify-content-between align-items-center item-menu-user">
+          <span class="text-menu text-color text-size-items">Gestión de usuarios</span>
+          <i class="fa fa-chevron-down me-4"></i>
+        </div>
+        <div class="d-flex justify-content-between align-items-center item-menu-user">
+          <span class="text-menu text-color text-size-items">Gestión de programas</span>
+          <i class="fa fa-chevron-down me-4"></i>
+        </div>
+        <div class="d-flex justify-content-between align-items-center item-menu-user">
+          <span class="text-menu text-color text-size-items">Gestión de misiones</span>
+          <i class="fa fa-chevron-down me-4"></i>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between align-items-center item-menu-user" (click)="setIsShowGestion()">
+            <span class="text-menu text-color text-size-items">Gestión de estilo</span>
+            <i class="fa me-4" [ngClass]="{'fa-chevron-up': isShowMenuGestion, 'fa-chevron-down': !isShowMenuGestion}"></i>
+          </div>
+          <div *ngIf="isShowMenuGestion">
+            <div class="d-flex menu-design align-items-center p-3" (click)="navigateTo('look-and-feel')">
+              <span class="text-color" style="font-weight:500;">Diseño del sistema</span>
+            </div>
+            <div class="d-flex menu-design align-items-center p-3">
+              <span class="text-color" style="font-weight:500;">Configurar pie de pagina</span>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center align-items-center mt-5">
+          <button class="btn-login text-menu">
+            <i class="fa fa-sign-out Cerrar Sesión" aria-hidden="true"></i>
+            <span class="text-color">Cerrar Sesión</span>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="!isShowMenuMobile">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="desktop-content background-main">
+    <div class="d-flex">
+      <div class="drawer-desktop">
+        <div class="menu-mobile" style="border-right: #e2e2e2 3px solid;">
+          <div class="d-flex  align-items-center item-menu-user item-menu-user--border">
+            <i class="fa fa-user fa-2x me-4 icon-color"></i>
+            <span class="text-menu text-color text-size-user">Jhon Jairo Zabala</span>
+          </div>
+          <div routerLink="/" class="d-flex justify-content-between align-items-center item-menu-user">
+            <span class="text-menu text-color text-size-items">Gestión del sistema</span>
+            <i class="fa fa-chevron-down me-4"></i>
+          </div>
+          <div class="d-flex justify-content-between align-items-center item-menu-user">
+            <span class="text-menu text-color text-size-items">Gestión de usuarios</span>
+            <i class="fa fa-chevron-down me-4"></i>
+          </div>
+          <div class="d-flex justify-content-between align-items-center item-menu-user">
+            <span class="text-menu text-color text-size-items">Gestión de programas</span>
+            <i class="fa fa-chevron-down me-4"></i>
+          </div>
+          <div class="d-flex justify-content-between align-items-center item-menu-user">
+            <span class="text-menu text-color text-size-items">Gestión de misiones</span>
+            <i class="fa fa-chevron-down me-4"></i>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between align-items-center item-menu-user" (click)="setIsShowGestion()">
+              <span class="text-menu text-color text-size-items">Gestión de estilo</span>
+              <i class="fa me-4" [ngClass]="{'fa-chevron-up': isShowMenuGestion, 'fa-chevron-down': !isShowMenuGestion}"></i>
+            </div>
+            <div *ngIf="isShowMenuGestion">
+              <div routerLink="look-and-feel" class="d-flex menu-design align-items-center p-3">
+                <span style="font-weight:500;" class="text-color">
+                  Diseño del sistema
+                </span>
+              </div>
+              <div class="d-flex menu-design align-items-center p-3">
+                <span style="font-weight:500;" class="text-color">Configurar pie de pagina</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-center align-items-center mt-5">
+            <button class="btn-login text-menu">
+              <i class="fa fa-sign-out text-color" aria-hidden="true"></i>
+              <span class="text-color"> Cerrar Sesión</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="look-and-feel">LookAndFeel</a></li>
+</ul>-->

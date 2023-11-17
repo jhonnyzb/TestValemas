@@ -1,0 +1,10 @@
+{
+  "ProgramId": "41",
+  "ImageBackgroundLogin": "https://dev-resources.valefiel.com/06/news/200425/img.png",
+  "Logo": "urlResource",
+  "PrimaryColor": "#ffffff",
+  "SecondaryColor": "#1A0C3F",
+  "TertiaryColor": "#C567F2",
+  "FontName": "Roboto",
+  "BackgroundColor": "#0081b3"
+}
